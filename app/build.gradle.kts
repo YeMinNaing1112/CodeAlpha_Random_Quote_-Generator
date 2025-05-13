@@ -2,9 +2,9 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.jetbrains.kotlin.serialization)
     id("com.google.devtools.ksp")
     id("com.google.dagger.hilt.android")
-    kotlin("plugin.serialization")
 }
 
 android {
@@ -67,9 +67,8 @@ dependencies {
 
     //Retrofit
     implementation (libs.retrofit)
+    implementation(libs.converter.gson)
 
     //Okhttp
     implementation(libs.okhttp)
-    implementation(libs.logging.interceptor)
-
 }
